@@ -7830,7 +7830,7 @@ function write_ws_xml_data(ws, opts, idx, wb) {
 				row = rows[R];
 				if(row.hidden) params.hidden = 1;
 				height = -1;
-				if(row.hpx) height = px2pt(row.hpx);
+				if(row.hpx) height = row.hpx;
 				else if(row.hpt) height = row.hpt;
 				if(height > -1) { params.ht = height; params.customHeight = 1; }
 				if(row.level) { params.outlineLevel = row.level; }
@@ -7844,7 +7844,7 @@ function write_ws_xml_data(ws, opts, idx, wb) {
 			row = rows[R];
 			if(row.hidden) params.hidden = 1;
 			height = -1;
-			if (row.hpx) height = px2pt(row.hpx);
+			if (row.hpx) height = row.hpx;
 			else if (row.hpt) height = row.hpt;
 			if (height > -1) { params.ht = height; params.customHeight = 1; }
 			if (row.level) { params.outlineLevel = row.level; }
